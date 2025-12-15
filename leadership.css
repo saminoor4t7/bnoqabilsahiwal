@@ -1,0 +1,260 @@
+/* styles/leadership.css */
+.leadership-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+}
+
+.leader-profile {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.photo-container {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #0056A4 0%, #003366 100%);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-credits {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.photo-credits a {
+    color: #4267B2;
+    text-decoration: none;
+}
+
+.photo-credits a:hover {
+    text-decoration: underline;
+}
+
+.leader-details h3 {
+    color: #0056A4;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.leader-details .position {
+    color: #FF6B00;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.social-links {
+    margin: 15px 0 25px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #4267B2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.social-link:hover {
+    background: #365899;
+    transform: translateY(-2px);
+}
+
+.leader-bio {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.leader-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-item i {
+    font-size: 24px;
+    color: #0056A4;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.stat-item h4 {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    font-weight: 600;
+}
+
+.stat-item p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0056A4;
+    margin: 5px 0 0;
+}
+
+.leader-quote {
+    background: #f8f9fa;
+    border-left: 4px solid #FF6B00;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.leader-quote i.fa-quote-left {
+    color: #FF6B00;
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.leader-quote p {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    text-align: right;
+    font-weight: 600;
+    color: #0056A4;
+    margin-top: 10px;
+}
+
+.leader-achievements {
+    margin-top: 30px;
+}
+
+.leader-achievements h4 {
+    color: #0056A4;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.leader-achievements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.leader-achievements li {
+    padding: 8px 0;
+    padding-left: 30px;
+    position: relative;
+    color: #555;
+}
+
+.leader-achievements li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.leader-contact {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.leader-contact .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .leader-profile {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .photo-container {
+        height: 300px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .leader-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .leadership-section {
+        padding: 50px 0;
+    }
+    
+    .leader-profile {
+        padding: 20px;
+    }
+    
+    .leader-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .leader-contact {
+        flex-direction: column;
+    }
+    
+    .leader-contact .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-container {
+        height: 250px;
+    }
+    
+    .leader-details h3 {
+        font-size: 28px;
+    }
+}
